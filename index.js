@@ -2,7 +2,8 @@ const express = require("express")
 const tools = require("./tools.js")
 const app = express()
 app.use(express.json())
-
+const cors = require('cors')
+app.use(cors())
 // Punto de entrada para probar el servidor express
 app.get("/",(request,response)=>{
     response.send("<h1>Hello Backend!</h1>")
